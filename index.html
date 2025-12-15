@@ -93,7 +93,7 @@ Me caracterizo por trabajar con un enfoque estructurado, escalable y orientado a
                     <span class="tech-tag">Bootstrap</span>
                     <span class="tech-tag">ORM de Django</span>
                 </div>
-                <a href="https://github.com/OmarSepulveda1/Evaluaci-n_M7" target="_blank" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
+                <a href="https://github.com/OmarSepulveda1/Evaluaci-n_M7" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
             </div>
             <div class="project-card">
                 <img src="assets/SOECSA.png" alt="Preview Soecsa" class="project-img">
@@ -107,7 +107,7 @@ Me caracterizo por trabajar con un enfoque estructurado, escalable y orientado a
                                 <span class="tech-tag">MySQL</span>
                                 <span class="tech-tag">Bootstrap</span>
                             </div>
-                <a href="https://github.com/OmarSepulveda1/Proyecto-Final-SOECSA" target="_blank" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
+                <a href="https://github.com/OmarSepulveda1/Proyecto-Final-SOECSA" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
             </div>
             <div class="project-card">
                 <img src="assets/LufkeBike.png" alt="Preview Lufke" class="project-img">
@@ -126,43 +126,87 @@ Me caracterizo por trabajar con un enfoque estructurado, escalable y orientado a
             </div>
                     
                     
-                <a href="https://github.com/OmarSepulveda1/Lufkebike" target="_blank" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
+                <a href="https://github.com/OmarSepulveda1/Lufkebike" target="_blank" rel="noopener noreferrer" class="btn-repo"><i class="fab fa-github"></i> Ver código</a>
             </div>
         </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contact" class="contact reveal">
+    <section id="contact" class="contact-section reveal">
         <h2>Contacto</h2>
-        <a href="mailto:omarsepulvedaramirez@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/omar-sepulveda-dev/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/OmarSepulveda1" target="_blank">GitHub</a>
+        <div class="contact-grid-container">
+
+            <!-- Columna Izquierda -->
+            <div class="contact-left">
+                
+                <!-- Tarjeta fusionada -->
+                <div class="info-box idea-box">
+                    <i class="fas fa-lightbulb info-icon"></i>
+                    <h3>¿Proyecto en mente?</h3>
+                    <p>Busco mi primera oportunidad para aportar mis conocimientos y crecer como desarrollador.</p>
+                    <hr class="info-divider">
+                    <h3 class="info-subtitle">Disponibilidad & Ubicación</h3>
+                    <p><strong>Inmediata</strong> para nuevos desafíos, en modalidad <strong>Remoto o Híbrido.</strong></p>
+                </div>
+
+                <!-- Tarjeta de habilidades -->
+                <div class="info-box">
+                    <i class="fas fa-puzzle-piece info-icon"></i>
+                    <h3>Habilidades Blandas</h3>
+                    <ul>
+                        <li>Rápido aprendizaje</li>
+                        <li>Capacidad analítica</li>
+                        <li>Resolución de problemas</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="contact-right">
+                <div class="contact-links">
+                    <a href="mailto:omarsepulvedaramirez@gmail.com" class="contact-btn-vertical"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/omar-sepulveda-dev/" target="_blank" rel="noopener noreferrer" class="contact-btn-vertical"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/OmarSepulveda1" target="_blank" rel="noopener noreferrer" class="contact-btn-vertical"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+
+                <div class="info-box cta-box">
+                    <i class="fas fa-rocket info-icon"></i>
+                    <h3>¿Listo para empezar?</h3>
+                    <p>Hablemos de cómo puedo ayudarte.</p>
+                    
+                    <!-- 
+                        **************************************************************************************************************************
+                        ** IMPORTANTE: Para que el formulario de contacto funcione, sigue estos pasos:                                           **
+                        ** 1. Ve a https://formspree.io/ y crea una cuenta gratuita.                                                            **
+                        ** 2. Crea un nuevo formulario para tu portafolio.                                                                      **
+                        ** 3. Formspree te dará una URL única (ej: https://formspree.io/f/xxxxxxxx).                                             **
+                        ** 4. Reemplaza "TU_ENDPOINT_DE_FORMSPREE_AQUI" en la línea de abajo con tu URL única.                                  **
+                        **************************************************************************************************************************
+                    -->
+                    <form id="contact-form" action="TU_ENDPOINT_DE_FORMSPREE_AQUI" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tu Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-cta"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+                    </form>
+                    <p id="form-status"></p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        © 2025 Omar Sepúlveda Ramírez · Portafolio Web
+        © <span id="current-year"></span> Omar Sepúlveda Ramírez · Portafolio Web
     </footer>
 
-    <!-- Scroll Animation JS -->
-    <script>
-        const reveals = document.querySelectorAll('.reveal');
-
-        function revealOnScroll() {
-            reveals.forEach(section => {
-                const windowHeight = window.innerHeight;
-                const elementTop = section.getBoundingClientRect().top;
-                const visiblePoint = 120;
-
-                if (elementTop < windowHeight - visiblePoint) {
-                    section.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
