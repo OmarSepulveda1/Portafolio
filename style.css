@@ -28,10 +28,11 @@ body {
   justify-content: center;
   padding: 4rem 2rem;
 
-  background-image: url('assets/banner.png');
+  background-image: url('assets/banner.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: center
+  relative;
 }
 .hero::before {
   content: '';
